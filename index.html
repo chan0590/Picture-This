@@ -15,22 +15,54 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
 
-    <!-- Landscape images for viewport small than 960px -->
+    <!-- Using <picture> element to display different images based on viewport size -->
     <picture>
+      <!-- Landscape images for viewport smaller than 960px -->
+      <!-- Landscape - Viewport 320px -->
+      <source srcset="images/landscape-320px-1x.jpg,
+                      images/landscape-640px-2x.jpg 2x,
+                      images/landscape-960px-3x.jpg 3x"
+              media="(max-width: 320px)">
 
-      <!-- Viewport 320px -->
-      <source srcset="
-      images/landscape-320px-1x.jpg,
-      images/landscape-320px-2x.jpg 2x,
-      images/landscape-320px-3x.jpg 3x"
-      media="(max-width: 320px)">
+      <!-- Landscape - Viewport 480px -->
+      <source srcset="images/landscape-480px-1x.jpg,
+                      images/landscape-960px-2x.jpg 2x,
+                      images/landscape-1440px-3x.jpg 3x"
+              media="(max-width: 480px)">
 
-      <!-- Viewport 480px -->
-      <source srcset="
-      images/landscape-">
+      <!-- Landscape - Viewport 720px -->
+      <source srcset="images/landscape-720px-1x.jpg,
+                      images/landscape-1440px-2x.jpg 2x,
+                      images/landscape-2160px-3x.jpg 3x"
+              media="(max-width: 720px)">
+
+      <!-- Landscape - Viewport 959px -->
+      <source srcset="images/landscape-960px-1x.jpg,
+                      images/landscape-1920px-2x.jpg 2x,
+                      images/landscape-2880px-3x.jpg 3x"
+              media="(max-width: 959px)">
+
+      <!-- Square images for viewport 960px or larger and smaller than 1280px/1600px -->
+      <!-- Square - Viewport 960px -->
+      <source srcset="images/square-480px-1x.jpg,
+                      images/square-960px-2x.jpg 2x,
+                      images/square-1440px-3x.jpg 3x"
+              media="(min-width: 960px) and (max-width: 1279px)">
+
+      <!-- Square - Viewport 1280px -->
+      <source srcset="images/square-640px-1x.jpg,
+                      images/square-1280px-2x.jpg 2x,
+                      images/square-1920px-3x.jpg 3x"
+              media="(min-width: 1280px) and (max-width: 1599px)">
+
+      <!-- Square - Viewport 1600px -->
+      <source srcset="images/square-800px-1x.jpg,
+                      images/square-1600px-2x.jpg 2x,
+                      images/square-2400px-3x.jpg 3x"
+              media="(min-width: 1600px)">
       
+      <img src="images/museum.jpg" alt="museum with arts and chairs">
     </picture>
 
   </header>
