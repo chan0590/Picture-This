@@ -19,7 +19,18 @@
 
     <!-- Landscape images for viewport small than 960px -->
     <picture>
-      <source srcset="images/landscape">
+
+      <!-- Viewport 320px -->
+      <source srcset="
+      images/landscape-320px-1x.jpg,
+      images/landscape-320px-2x.jpg 2x,
+      images/landscape-320px-3x.jpg 3x"
+      media="(max-width: 320px)">
+
+      <!-- Viewport 480px -->
+      <source srcset="
+      images/landscape-">
+      
     </picture>
 
   </header>
